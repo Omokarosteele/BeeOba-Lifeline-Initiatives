@@ -105,7 +105,7 @@ section{scroll-margin-top:92px}
 .brand-text small{font-size:.58rem;font-weight:700;letter-spacing:.21em;text-transform:uppercase;color:var(--teal);margin-top:.15rem}
 
 .nav{display:flex;align-items:center;gap:1.8rem}
-.nav-links{display:flex;align-items:center;gap:1.9rem}
+.nav-links{display:flex;align-items:center;gap:1.7rem}
 .nav-link{position:relative;font-size:.93rem;font-weight:500;color:var(--ink-2);transition:color .22s ease;padding:.2rem 0}
 .nav-link::after{
   content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;border-radius:2px;
@@ -161,25 +161,51 @@ section{scroll-margin-top:92px}
 
 .case-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:1.8rem;box-shadow:var(--shadow-sm);
+  box-shadow:var(--shadow-sm);overflow:hidden;
   transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
   display:flex;flex-direction:column;
 }
 .case-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(14,124,123,.28)}
 
-.case-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem;flex-wrap:wrap}
-.case-avatar{
-  width:54px;height:54px;border-radius:50%;flex:none;
-  display:grid;place-items:center;
-  font-family:var(--font-display);font-weight:700;font-size:1.35rem;
-  background:linear-gradient(135deg,#D4EEFF,#9BC7F0);color:#1A4A7A;
+/* Photo area */
+.case-photo{
+  position:relative;
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:linear-gradient(135deg,#E6F6F3,#FFF6E2);
 }
-.case-card:nth-child(6n+1) .case-avatar{background:linear-gradient(135deg,#FFE0C7,#FFB88C);color:#8A4A00}
-.case-card:nth-child(6n+2) .case-avatar{background:linear-gradient(135deg,#D4EEFF,#9BC7F0);color:#1A4A7A}
-.case-card:nth-child(6n+3) .case-avatar{background:linear-gradient(135deg,#D9F4E4,#9EE0BC);color:#1C6B44}
-.case-card:nth-child(6n+4) .case-avatar{background:linear-gradient(135deg,#F3D9F7,#D9A7E3);color:#6A2A78}
-.case-card:nth-child(6n+5) .case-avatar{background:linear-gradient(135deg,#FFF0B8,#FFD75E);color:#7A5500}
-.case-card:nth-child(6n+6) .case-avatar{background:linear-gradient(135deg,#FFD6D6,#F39A9A);color:#8A2323}
+.case-photo img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .5s ease;
+}
+.case-card:hover .case-photo img{transform:scale(1.04)}
+.case-photo-tag{
+  position:absolute;top:1rem;left:1rem;
+  font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.4rem .8rem;border-radius:999px;
+  background:#fff;color:var(--ink);
+  box-shadow:0 4px 12px rgba(11,46,43,.15);
+}
+.case-photo-tag--urgent{background:#B93A22;color:#fff}
+
+.case-body{padding:1.6rem 1.7rem 1.8rem;display:flex;flex-direction:column;flex:1}
+
+.case-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.case-avatar{
+  width:50px;height:50px;border-radius:50%;flex:none;
+  display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:700;font-size:1.25rem;
+  background:linear-gradient(135deg,#FFD6D6,#F39A9A);color:#8A2323;
+}
+.case-card:nth-child(6n+2) .case-avatar{background:linear-gradient(135deg,#FFE0C7,#FFB88C);color:#8A4A00}
+.case-card:nth-child(6n+3) .case-avatar{background:linear-gradient(135deg,#D4EEFF,#9BC7F0);color:#1A4A7A}
+.case-card:nth-child(6n+4) .case-avatar{background:linear-gradient(135deg,#D9F4E4,#9EE0BC);color:#1C6B44}
+.case-card:nth-child(6n+5) .case-avatar{background:linear-gradient(135deg,#F3D9F7,#D9A7E3);color:#6A2A78}
+.case-card:nth-child(6n+6) .case-avatar{background:linear-gradient(135deg,#FFF0B8,#FFD75E);color:#7A5500}
+.case-card:nth-child(6n+7) .case-avatar{background:linear-gradient(135deg,#FFD6D6,#F39A9A);color:#8A2323}
 
 .case-header-text{flex:1;min-width:0}
 .case-header h3{font-size:1.15rem;margin-bottom:.15rem}
@@ -397,11 +423,11 @@ section{scroll-margin-top:92px}
 
       <div class="page-hero-stats">
         <div>
-          <strong>6</strong>
+          <strong>7</strong>
           <span>Active cases</span>
         </div>
         <div>
-          <strong>£6,900</strong>
+          <strong>£7,800</strong>
           <span>Total funding needed</span>
         </div>
         <div>
@@ -417,304 +443,377 @@ section{scroll-margin-top:92px}
     <div class="container">
       <div class="cases-grid">
 
-        <!-- CASE 1 -->
+        <!-- ============ CASE 1 — LORETTA (URGENT) ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">S</div>
-            <div class="case-header-text">
-              <h3>Sarah, 34</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Manchester
-              </p>
-            </div>
-            <span class="case-tag case-tag--urgent">Urgent</span>
+          <div class="case-photo">
+            <img src="IMG-20260930-WA0046.jpg" alt="Loretta, a breast cancer patient supported by BeeOba Lifeline Initiatives">
+            <span class="case-photo-tag case-photo-tag--urgent">Urgent</span>
           </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Breast cancer — Stage 2
-          </p>
-
-          <p class="case-story">
-            Sarah is a single mother of two young children, recently diagnosed with Stage 2
-            breast cancer. She needs to attend Christie Hospital for six weeks of daily
-            radiotherapy but has no reliable transport and no childcare for appointments.
-          </p>
-
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Transport to and from daily radiotherapy</li>
-              <li>Childcare during treatment sessions</li>
-              <li>Meal support for her family</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:37%"></span>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">L</div>
+              <div class="case-header-text">
+                <h3>Loretta</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Manchester
+                </p>
+              </div>
+              <span class="case-tag case-tag--urgent">Urgent</span>
             </div>
-            <div class="progress-text">
-              <span><strong>£450</strong> raised</span>
-              <span>of <strong>£1,200</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support Sarah&rsquo;s case
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Stage 3 breast cancer
+            </p>
+
+            <p class="case-story">
+              Loretta has been diagnosed with <strong>Stage 3 breast cancer</strong> and her
+              doctors have prescribed an urgent course of <strong>chemotherapy and
+              radiotherapy</strong>. She needs <strong>£900</strong> to cover the full cost of
+              her treatment. Without this support, Loretta cannot begin the treatment that her
+              doctors say gives her the best chance of recovery. She is reaching out to our
+              community for help &mdash; every pound brings her closer to starting.
+            </p>
+
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Chemotherapy treatment costs</li>
+                <li>Radiotherapy treatment costs</li>
+                <li>Travel to and from hospital appointments</li>
+                <li>Nutrition support during treatment</li>
+              </ul>
+            </div>
+
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:0%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£0</strong> raised</span>
+                <span>of <strong>£900</strong> needed</span>
+              </div>
+            </div>
+
+            <a class="btn btn-gold case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support Loretta&rsquo;s treatment
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
-        <!-- CASE 2 -->
+        <!-- ============ CASE 2 — SARAH ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">D</div>
-            <div class="case-header-text">
-              <h3>Daniel, 8</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Wythenshawe
-              </p>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">S</div>
+              <div class="case-header-text">
+                <h3>Sarah, 34</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Manchester
+                </p>
+              </div>
+              <span class="case-tag case-tag--urgent">Urgent</span>
             </div>
-            <span class="case-tag">Child</span>
-          </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Acute lymphoblastic leukaemia
-          </p>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Breast cancer — Stage 2
+            </p>
 
-          <p class="case-story">
-            Daniel is eight years old and is receiving treatment at Royal Manchester
-            Children&rsquo;s Hospital. His parents have both reduced their work hours to be at
-            his bedside, and the family is struggling to keep up with travel and household costs.
-          </p>
+            <p class="case-story">
+              Sarah is a single mother of two young children, recently diagnosed with Stage 2
+              breast cancer. She needs to attend Christie Hospital for six weeks of daily
+              radiotherapy but has no reliable transport and no childcare for appointments.
+            </p>
 
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Travel costs to and from hospital</li>
-              <li>Meal and grocery support</li>
-              <li>Help with household bills</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:44%"></span>
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Transport to and from daily radiotherapy</li>
+                <li>Childcare during treatment sessions</li>
+                <li>Meal support for her family</li>
+              </ul>
             </div>
-            <div class="progress-text">
-              <span><strong>£1,100</strong> raised</span>
-              <span>of <strong>£2,500</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support Daniel&rsquo;s case
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:37%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£450</strong> raised</span>
+                <span>of <strong>£1,200</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support Sarah&rsquo;s case
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
-        <!-- CASE 3 -->
+        <!-- ============ CASE 3 — DANIEL ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">G</div>
-            <div class="case-header-text">
-              <h3>Grace, 52</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Salford
-              </p>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">D</div>
+              <div class="case-header-text">
+                <h3>Daniel, 8</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Wythenshawe
+                </p>
+              </div>
+              <span class="case-tag">Child</span>
             </div>
-            <span class="case-tag case-tag--recovery">Recovery</span>
-          </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Ovarian cancer — post-surgery
-          </p>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Acute lymphoblastic leukaemia
+            </p>
 
-          <p class="case-story">
-            Grace is recovering at home after major surgery. Her husband has reduced his work
-            hours to become her full-time caregiver, putting pressure on the household finances.
-            Grace is also struggling emotionally and would benefit from professional counselling.
-          </p>
+            <p class="case-story">
+              Daniel is eight years old and is receiving treatment at Royal Manchester
+              Children&rsquo;s Hospital. His parents have both reduced their work hours to be at
+              his bedside, and the family is struggling to keep up with travel and household costs.
+            </p>
 
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Professional counselling sessions</li>
-              <li>Household cleaning and support</li>
-              <li>Place in a peer support group</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:75%"></span>
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Travel costs to and from hospital</li>
+                <li>Meal and grocery support</li>
+                <li>Help with household bills</li>
+              </ul>
             </div>
-            <div class="progress-text">
-              <span><strong>£600</strong> raised</span>
-              <span>of <strong>£800</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support Grace&rsquo;s case
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:44%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£1,100</strong> raised</span>
+                <span>of <strong>£2,500</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support Daniel&rsquo;s case
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
-        <!-- CASE 4 -->
+        <!-- ============ CASE 4 — GRACE ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">O</div>
-            <div class="case-header-text">
-              <h3>The Okafor Family</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Manchester
-              </p>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">G</div>
+              <div class="case-header-text">
+                <h3>Grace, 52</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Salford
+                </p>
+              </div>
+              <span class="case-tag case-tag--recovery">Recovery</span>
             </div>
-            <span class="case-tag">Family</span>
-          </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Prostate cancer — father is patient
-          </p>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Ovarian cancer — post-surgery
+            </p>
 
-          <p class="case-story">
-            The Okafor family has two young children. Their father was recently diagnosed with
-            prostate cancer and their mother has become his primary caregiver. The family is
-            facing lost income and needs practical, day-to-day help to keep things running.
-          </p>
+            <p class="case-story">
+              Grace is recovering at home after major surgery. Her husband has reduced his work
+              hours to become her full-time caregiver, putting pressure on the household finances.
+              Grace is also struggling emotionally and would benefit from professional counselling.
+            </p>
 
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Weekly care packages and meals</li>
-              <li>School run help for the children</li>
-              <li>Help with utility bills this winter</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:21%"></span>
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Professional counselling sessions</li>
+                <li>Household cleaning and support</li>
+                <li>Place in a peer support group</li>
+              </ul>
             </div>
-            <div class="progress-text">
-              <span><strong>£320</strong> raised</span>
-              <span>of <strong>£1,500</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support the Okafor family
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:75%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£600</strong> raised</span>
+                <span>of <strong>£800</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support Grace&rsquo;s case
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
-        <!-- CASE 5 -->
+        <!-- ============ CASE 5 — OKAFOR FAMILY ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">J</div>
-            <div class="case-header-text">
-              <h3>James, 27</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Stockport
-              </p>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">O</div>
+              <div class="case-header-text">
+                <h3>The Okafor Family</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Manchester
+                </p>
+              </div>
+              <span class="case-tag">Family</span>
             </div>
-            <span class="case-tag case-tag--survivor">Survivor</span>
-          </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Hodgkin lymphoma — in remission
-          </p>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Prostate cancer — father is patient
+            </p>
 
-          <p class="case-story">
-            James has finished treatment and is in remission — but returning to normal life has
-            been harder than expected. He needs counselling to process his experience, help
-            rebuilding his confidence at work, and guidance navigating benefits paperwork.
-          </p>
+            <p class="case-story">
+              The Okafor family has two young children. Their father was recently diagnosed with
+              prostate cancer and their mother has become his primary caregiver. The family is
+              facing lost income and needs practical, day-to-day help to keep things running.
+            </p>
 
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Rehabilitation and confidence coaching</li>
-              <li>Counselling sessions</li>
-              <li>Help with benefits and paperwork</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:68%"></span>
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Weekly care packages and meals</li>
+                <li>School run help for the children</li>
+                <li>Help with utility bills this winter</li>
+              </ul>
             </div>
-            <div class="progress-text">
-              <span><strong>£410</strong> raised</span>
-              <span>of <strong>£600</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support James&rsquo;s case
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:21%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£320</strong> raised</span>
+                <span>of <strong>£1,500</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support the Okafor family
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
-        <!-- CASE 6 -->
+        <!-- ============ CASE 6 — JAMES ============ -->
         <article class="case-card">
-          <div class="case-header">
-            <div class="case-avatar" aria-hidden="true">A</div>
-            <div class="case-header-text">
-              <h3>Amara, 45</h3>
-              <p class="case-location">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                Manchester
-              </p>
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">J</div>
+              <div class="case-header-text">
+                <h3>James, 27</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Stockport
+                </p>
+              </div>
+              <span class="case-tag case-tag--survivor">Survivor</span>
             </div>
-            <span class="case-tag">In treatment</span>
-          </div>
 
-          <p class="case-condition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
-            Cervical cancer — undergoing chemotherapy
-          </p>
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Hodgkin lymphoma — in remission
+            </p>
 
-          <p class="case-story">
-            Amara is midway through chemotherapy. The treatment has caused significant hair loss
-            and appetite loss, and the cost of travelling to appointments and buying supplements
-            has become overwhelming. She is also struggling with household bills while unable to work.
-          </p>
+            <p class="case-story">
+              James has finished treatment and is in remission &mdash; but returning to normal life has
+              been harder than expected. He needs counselling to process his experience, help
+              rebuilding his confidence at work, and guidance navigating benefits paperwork.
+            </p>
 
-          <div class="case-needs">
-            <h4>What&rsquo;s needed</h4>
-            <ul>
-              <li>Wig and head-covering support</li>
-              <li>Nutrition supplements</li>
-              <li>Help with household expenses</li>
-            </ul>
-          </div>
-
-          <div class="case-progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
-              <span style="width:28%"></span>
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Rehabilitation and confidence coaching</li>
+                <li>Counselling sessions</li>
+                <li>Help with benefits and paperwork</li>
+              </ul>
             </div>
-            <div class="progress-text">
-              <span><strong>£250</strong> raised</span>
-              <span>of <strong>£900</strong></span>
-            </div>
-          </div>
 
-          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
-            Support Amara&rsquo;s case
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:68%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£410</strong> raised</span>
+                <span>of <strong>£600</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support James&rsquo;s case
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- ============ CASE 7 — AMARA ============ -->
+        <article class="case-card">
+          <div class="case-body">
+            <div class="case-header">
+              <div class="case-avatar" aria-hidden="true">A</div>
+              <div class="case-header-text">
+                <h3>Amara, 45</h3>
+                <p class="case-location">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  Manchester
+                </p>
+              </div>
+              <span class="case-tag">In treatment</span>
+            </div>
+
+            <p class="case-condition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+              Cervical cancer — undergoing chemotherapy
+            </p>
+
+            <p class="case-story">
+              Amara is midway through chemotherapy. The treatment has caused significant hair loss
+              and appetite loss, and the cost of travelling to appointments and buying supplements
+              has become overwhelming. She is also struggling with household bills while unable to work.
+            </p>
+
+            <div class="case-needs">
+              <h4>What&rsquo;s needed</h4>
+              <ul>
+                <li>Wig and head-covering support</li>
+                <li>Nutrition supplements</li>
+                <li>Help with household expenses</li>
+              </ul>
+            </div>
+
+            <div class="case-progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
+                <span style="width:28%"></span>
+              </div>
+              <div class="progress-text">
+                <span><strong>£250</strong> raised</span>
+                <span>of <strong>£900</strong></span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+              Support Amara&rsquo;s case
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </article>
 
       </div>
