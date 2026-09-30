@@ -167,6 +167,13 @@ section{scroll-margin-top:92px}
 }
 .case-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(14,124,123,.28)}
 
+/* Featured first card (Loretta) */
+.case-card--featured{
+  border:2px solid var(--gold);
+  box-shadow:0 22px 46px -20px rgba(242,183,5,.4);
+}
+.case-card--featured:hover{border-color:var(--gold);box-shadow:0 26px 52px -20px rgba(242,183,5,.5)}
+
 /* Photo area */
 .case-photo{
   position:relative;
@@ -415,7 +422,7 @@ section{scroll-margin-top:92px}
       <p class="eyebrow">Cases we currently support</p>
       <h1>Choose a case. <span class="hl">Change a life.</span></h1>
       <p class="page-hero-lead">
-        Every case below represents a real person or family in our community facing cancer
+        Every case below represents a real person or family facing cancer
         or a serious health challenge. Read their stories, see exactly what they need, and
         choose who you would like to support today. <strong>100% of your gift goes directly
         to the case you select.</strong>
@@ -443,10 +450,10 @@ section{scroll-margin-top:92px}
     <div class="container">
       <div class="cases-grid">
 
-        <!-- ============ CASE 1 — LORETTA (URGENT) ============ -->
-        <article class="case-card">
+        <!-- ============ CASE 1 — LORETTA (URGENT, NIGERIA) ============ -->
+        <article class="case-card case-card--featured">
           <div class="case-photo">
-            <img src="IMG-20260930-WA0046.jpg" alt="Loretta, a breast cancer patient supported by BeeOba Lifeline Initiatives">
+            <img src="IMG-20260930-WA0046.jpg" alt="Loretta, a Stage 3 breast cancer patient in Nigeria supported by BeeOba Lifeline Initiatives">
             <span class="case-photo-tag case-photo-tag--urgent">Urgent</span>
           </div>
 
@@ -457,7 +464,7 @@ section{scroll-margin-top:92px}
                 <h3>Loretta</h3>
                 <p class="case-location">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
-                  Manchester
+                  Nigeria
                 </p>
               </div>
               <span class="case-tag case-tag--urgent">Urgent</span>
@@ -469,12 +476,12 @@ section{scroll-margin-top:92px}
             </p>
 
             <p class="case-story">
-              Loretta has been diagnosed with <strong>Stage 3 breast cancer</strong> and her
-              doctors have prescribed an urgent course of <strong>chemotherapy and
-              radiotherapy</strong>. She needs <strong>£900</strong> to cover the full cost of
-              her treatment. Without this support, Loretta cannot begin the treatment that her
-              doctors say gives her the best chance of recovery. She is reaching out to our
-              community for help &mdash; every pound brings her closer to starting.
+              Loretta, who lives in Nigeria, has been diagnosed with <strong>Stage 3 breast
+              cancer</strong> and her doctors have prescribed an urgent course of
+              <strong>chemotherapy and radiotherapy</strong>. She needs <strong>£900</strong> to
+              cover the full cost of her treatment. Without this support, Loretta cannot begin
+              the treatment that her doctors say gives her the best chance of recovery. She is
+              reaching out to our community for help &mdash; every pound brings her closer to starting.
             </p>
 
             <div class="case-needs">
@@ -497,7 +504,8 @@ section{scroll-margin-top:92px}
               </div>
             </div>
 
-            <a class="btn btn-gold case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            <!-- ✅ Loretta's dedicated Stripe link -->
+            <a class="btn btn-gold case-btn" href="https://buy.stripe.com/dRm3cv94KcZ7eRZdEZfIs00" target="_blank" rel="noopener">
               Support Loretta&rsquo;s treatment
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
