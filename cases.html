@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cases We Support — BeeOba Lifeline Initiatives</title>
+<meta name="description" content="Browse the real people and families currently supported by BeeOba Lifeline Initiatives. Choose a case and make a direct difference today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   BeeOba Lifeline Initiatives — cases page stylesheet
+   ========================================================= */
+
+:root{
+  --ink:#0B2E2B;
+  --ink-2:#41635F;
+  --teal:#0E7C7B;
+  --teal-600:#0A5F5E;
+  --teal-100:#DCF0EE;
+  --gold:#F2B705;
+  --gold-300:#FFDD7A;
+  --gold-100:#FFF3D6;
+  --cream:#FFFBF3;
+  --sand:#F7F0E4;
+  --line:rgba(11,46,43,.10);
+  --radius:20px;
+  --shadow-sm:0 4px 16px rgba(11,46,43,.06);
+  --shadow:0 22px 46px -20px rgba(11,46,43,.28);
+  --max:1140px;
+  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.7;
+  color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4{
+  font-family:var(--font-display);font-weight:600;line-height:1.14;
+  letter-spacing:-.015em;margin:0;color:var(--ink);
+}
+h1{font-size:clamp(2.35rem,5.2vw,3.85rem);font-weight:700}
+h2{font-size:clamp(1.85rem,3.6vw,2.7rem)}
+h3{font-size:1.15rem}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+.container{width:min(100% - 2.5rem, var(--max));margin-inline:auto}
+section{scroll-margin-top:92px}
+.section{padding:clamp(4rem,8vw,7rem) 0}
+
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:200;
+  background:var(--ink);color:var(--cream);padding:.8rem 1.2rem;border-radius:0 0 10px 0;
+}
+.skip-link:focus{left:0}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.1rem;
+}
+.eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:var(--gold);flex:none}
+.section-head{max-width:660px;margin-bottom:clamp(2.4rem,5vw,3.4rem)}
+.section-head.center{margin-inline:auto;text-align:center}
+.section-head.center .eyebrow{justify-content:center}
+.section-head p{margin-top:1.05rem;color:var(--ink-2);font-size:1.05rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.9rem 1.6rem;border-radius:999px;border:1.5px solid transparent;
+  font-size:.95rem;font-weight:600;letter-spacing:.01em;cursor:pointer;
+  transition:transform .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 14px 26px -14px rgba(14,124,123,.95)}
+.btn-primary:hover{background:var(--teal-600);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#3A2A00;box-shadow:0 14px 26px -16px rgba(242,183,5,.95)}
+.btn-gold:hover{background:#FFC82E;transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(11,46,43,.18);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);background:#fff;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--teal-600)}
+.btn-light:hover{transform:translateY(-2px);background:#F1FBF9}
+
+/* HEADER */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,251,243,.88);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.72rem}
+.logo-mark{width:46px;height:46px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-family:var(--font-display);font-size:1.32rem;font-weight:700;letter-spacing:-.025em;color:var(--ink)}
+.brand-text small{font-size:.58rem;font-weight:700;letter-spacing:.21em;text-transform:uppercase;color:var(--teal);margin-top:.15rem}
+
+.nav{display:flex;align-items:center;gap:1.8rem}
+.nav-links{display:flex;align-items:center;gap:1.9rem}
+.nav-link{position:relative;font-size:.93rem;font-weight:500;color:var(--ink-2);transition:color .22s ease;padding:.2rem 0}
+.nav-link::after{
+  content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;border-radius:2px;
+  background:var(--gold);transition:width .28s ease;
+}
+.nav-link:hover{color:var(--teal)}
+.nav-link:hover::after{width:100%}
+.nav-link.active{color:var(--teal);font-weight:600}
+.nav-link.active::after{width:100%}
+.nav .btn{padding:.72rem 1.4rem;font-size:.9rem}
+.nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.nav-btn{display:none}
+
+/* PAGE HERO */
+.page-hero{
+  position:relative;overflow:hidden;
+  padding:clamp(3rem,7vw,5rem) 0 clamp(2.5rem,5vw,3.5rem);
+  background:
+    radial-gradient(700px 420px at 90% 0%, rgba(242,183,5,.16), transparent 60%),
+    radial-gradient(600px 420px at 0% 100%, rgba(14,124,123,.10), transparent 60%),
+    var(--cream);
+}
+.page-hero h1{max-width:18ch}
+.page-hero h1 .hl{
+  position:relative;display:inline-block;color:var(--teal);white-space:nowrap;
+}
+.page-hero h1 .hl::after{
+  content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.32em;border-radius:5px;
+  background:linear-gradient(90deg,var(--gold-300),var(--gold));opacity:.55;z-index:-1;
+}
+.page-hero-lead{
+  margin-top:1.5rem;font-size:1.09rem;color:var(--ink-2);max-width:62ch;
+}
+.page-hero-stats{
+  display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.4rem;
+  padding-top:2rem;border-top:1px solid var(--line);
+}
+.page-hero-stats div strong{
+  display:block;font-family:var(--font-display);font-weight:700;
+  font-size:1.7rem;color:var(--teal);line-height:1;
+}
+.page-hero-stats div span{
+  display:block;margin-top:.35rem;font-size:.78rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);
+}
+
+/* CASES GRID */
+.cases-section{background:var(--sand);padding:clamp(3rem,6vw,5rem) 0}
+.cases-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.6rem;
+}
+
+.case-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.8rem;box-shadow:var(--shadow-sm);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  display:flex;flex-direction:column;
+}
+.case-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(14,124,123,.28)}
+
+.case-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.case-avatar{
+  width:54px;height:54px;border-radius:50%;flex:none;
+  display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:700;font-size:1.35rem;
+  background:linear-gradient(135deg,#D4EEFF,#9BC7F0);color:#1A4A7A;
+}
+.case-card:nth-child(6n+1) .case-avatar{background:linear-gradient(135deg,#FFE0C7,#FFB88C);color:#8A4A00}
+.case-card:nth-child(6n+2) .case-avatar{background:linear-gradient(135deg,#D4EEFF,#9BC7F0);color:#1A4A7A}
+.case-card:nth-child(6n+3) .case-avatar{background:linear-gradient(135deg,#D9F4E4,#9EE0BC);color:#1C6B44}
+.case-card:nth-child(6n+4) .case-avatar{background:linear-gradient(135deg,#F3D9F7,#D9A7E3);color:#6A2A78}
+.case-card:nth-child(6n+5) .case-avatar{background:linear-gradient(135deg,#FFF0B8,#FFD75E);color:#7A5500}
+.case-card:nth-child(6n+6) .case-avatar{background:linear-gradient(135deg,#FFD6D6,#F39A9A);color:#8A2323}
+
+.case-header-text{flex:1;min-width:0}
+.case-header h3{font-size:1.15rem;margin-bottom:.15rem}
+.case-location{font-size:.82rem;color:var(--ink-2);display:flex;align-items:center;gap:.3rem}
+
+.case-tag{
+  font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.32rem .7rem;border-radius:999px;
+  background:var(--gold-100);color:#8A6300;white-space:nowrap;
+}
+.case-tag--urgent{background:#FFE5E0;color:#B93A22}
+.case-tag--recovery{background:var(--teal-100);color:var(--teal-600)}
+.case-tag--survivor{background:#E4E9FF;color:#3A4A9E}
+
+.case-condition{
+  font-weight:600;color:var(--teal);font-size:.93rem;margin-bottom:.7rem;
+  display:flex;align-items:center;gap:.4rem;
+}
+.case-story{
+  font-size:.92rem;color:var(--ink-2);line-height:1.65;margin-bottom:1.2rem;flex:1;
+}
+
+.case-needs{
+  background:var(--cream);border-radius:14px;padding:1rem 1.1rem;
+  margin-bottom:1.3rem;border:1px dashed rgba(11,46,43,.1);
+}
+.case-needs h4{
+  font-family:var(--font-body);font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.6rem;
+}
+.case-needs ul{display:grid;gap:.35rem}
+.case-needs li{
+  font-size:.87rem;color:var(--ink);padding-left:1.1rem;position:relative;line-height:1.55;
+}
+.case-needs li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:6px;height:6px;border-radius:50%;background:var(--gold);
+}
+
+.case-progress{margin-bottom:1.2rem}
+.progress-bar{
+  height:8px;background:var(--teal-100);border-radius:999px;
+  overflow:hidden;margin-bottom:.55rem;
+}
+.progress-bar span{
+  display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--teal),var(--gold));
+}
+.progress-text{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.82rem;color:var(--ink-2);
+}
+.progress-text strong{color:var(--ink);font-weight:700}
+
+.case-btn{width:100%;margin-top:auto}
+
+/* CTA */
+.cases-cta{padding:clamp(3rem,6vw,5rem) 0;background:var(--cream)}
+.cta-banner{
+  position:relative;overflow:hidden;
+  border-radius:30px;padding:clamp(2.2rem,5vw,3.4rem);
+  background:linear-gradient(120deg,#0E7C7B 0%,#0B4A48 100%);
+  color:#fff;display:flex;flex-wrap:wrap;gap:1.8rem;
+  align-items:center;justify-content:space-between;box-shadow:var(--shadow);
+}
+.cta-banner::before{
+  content:"";position:absolute;width:340px;height:340px;border-radius:50%;
+  right:-120px;bottom:-180px;background:rgba(242,183,5,.20);
+}
+.cta-banner > *{position:relative}
+.cta-banner h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);max-width:24ch}
+.cta-banner p{margin-top:.7rem;color:rgba(255,255,255,.78);max-width:46ch;font-size:.98rem}
+.cta-actions{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* FOOTER */
+.site-footer{background:var(--ink);color:rgba(255,251,243,.7);padding:clamp(3rem,6vw,4.4rem) 0 1.8rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:2.6rem;
+  padding-bottom:2.6rem;border-bottom:1px solid rgba(255,251,243,.12);
+}
+.site-footer .brand-text strong{color:var(--cream)}
+.site-footer .brand-text small{color:var(--gold-300)}
+.footer-about{margin-top:1.3rem;font-size:.92rem;max-width:42ch;line-height:1.75}
+.footer-social{display:flex;gap:.6rem;margin-top:1.6rem}
+.footer-social a{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,251,243,.08);color:var(--cream);
+  transition:background-color .25s ease,transform .25s ease,color .25s ease;
+}
+.footer-social a:hover{background:var(--gold);color:#3A2A00;transform:translateY(-3px)}
+.footer-col h4{
+  color:var(--cream);font-family:var(--font-body);font-size:.78rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.2rem;
+}
+.footer-col ul{display:grid;gap:.7rem}
+.footer-col a{font-size:.93rem;transition:color .22s ease}
+.footer-col a:hover{color:var(--gold-300)}
+.footer-bottom{
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;
+  padding-top:1.8rem;font-size:.83rem;
+}
+.footer-bottom .legal{display:flex;gap:1.4rem;flex-wrap:wrap}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-grid > div:first-child{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .nav-btn{
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:46px;height:46px;padding:0 12px;border-radius:13px;
+    border:1px solid var(--line);background:#fff;cursor:pointer;
+  }
+  .nav-btn span{
+    display:block;height:2px;width:100%;border-radius:2px;background:var(--ink);
+    transition:transform .28s ease,opacity .2s ease;
+  }
+  .nav{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--cream);border-bottom:1px solid var(--line);
+    padding:1rem 1.25rem 1.6rem;
+    box-shadow:0 22px 34px -22px rgba(11,46,43,.45);
+    display:none;
+  }
+  .nav-toggle:checked ~ .nav{display:flex}
+  .nav-links{flex-direction:column;align-items:stretch;gap:0}
+  .nav-links li{border-bottom:1px solid var(--line)}
+  .nav-link{display:block;padding:.95rem .2rem;font-size:1rem}
+  .nav-link::after{display:none}
+  .nav .btn{margin-top:1.3rem}
+  .nav-toggle:checked ~ .nav-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle:checked ~ .nav-btn span:nth-child(2){opacity:0}
+  .nav-toggle:checked ~ .nav-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:720px){
+  .cta-banner{flex-direction:column;align-items:flex-start}
+  .page-hero-stats{gap:1.4rem 2rem}
+}
+@media (max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html" aria-label="BeeOba Lifeline Initiatives — home">
+      <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-label="BeeOba Lifeline Initiatives logo">
+        <path d="M32 3.5 56.5 17.75v28.5L32 60.5 7.5 46.25v-28.5z" fill="#F2B705" opacity=".13"/>
+        <path d="M32 3.5 56.5 17.75v28.5L32 60.5 7.5 46.25v-28.5z" fill="none" stroke="#0E7C7B" stroke-width="3" stroke-linejoin="round"/>
+        <ellipse cx="30" cy="22.5" rx="9" ry="5.6" fill="#9BD9D6" opacity=".95" transform="rotate(-26 30 22.5)"/>
+        <ellipse cx="41" cy="21.5" rx="8" ry="5" fill="#C6EAE8" opacity=".95" transform="rotate(18 41 21.5)"/>
+        <ellipse cx="33" cy="36" rx="13.5" ry="10" fill="#F2B705"/>
+        <g stroke="#0B2E2B" stroke-width="3.6" stroke-linecap="round" transform="rotate(-8 33 36)">
+          <path d="M30.4 28.5v15"/>
+          <path d="M38 28.5v15"/>
+        </g>
+        <path d="M45.6 33.6 51 36l-5.4 2.4z" fill="#0B2E2B" opacity=".85"/>
+        <circle cx="20.5" cy="32" r="6.6" fill="#0B2E2B"/>
+        <circle cx="18.4" cy="30.4" r="1.5" fill="#FFFBF3"/>
+        <path d="M17 26.4c-1.8-4-3.6-6-6.2-7" fill="none" stroke="#0B2E2B" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="10.2" cy="19" r="1.7" fill="#F2B705"/>
+        <path d="M22.4 25.6c.5-4 1.9-6.4 4-8" fill="none" stroke="#0B2E2B" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="27" cy="16.8" r="1.7" fill="#F2B705"/>
+      </svg>
+      <span class="brand-text">
+        <strong>BeeOba</strong>
+        <small>Lifeline Initiatives</small>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-btn" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html#about">About</a></li>
+        <li><a class="nav-link" href="index.html#programs">Programs</a></li>
+        <li><a class="nav-link" href="index.html#journey">How we help</a></li>
+        <li><a class="nav-link active" href="cases.html" aria-current="page">Cases</a></li>
+        <li><a class="nav-link" href="index.html#involved">Get involved</a></li>
+        <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">Donate</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Cases we currently support</p>
+      <h1>Choose a case. <span class="hl">Change a life.</span></h1>
+      <p class="page-hero-lead">
+        Every case below represents a real person or family in our community facing cancer
+        or a serious health challenge. Read their stories, see exactly what they need, and
+        choose who you would like to support today. <strong>100% of your gift goes directly
+        to the case you select.</strong>
+      </p>
+
+      <div class="page-hero-stats">
+        <div>
+          <strong>6</strong>
+          <span>Active cases</span>
+        </div>
+        <div>
+          <strong>£6,900</strong>
+          <span>Total funding needed</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>Goes to the case you choose</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASES GRID ===================== -->
+  <section class="cases-section">
+    <div class="container">
+      <div class="cases-grid">
+
+        <!-- CASE 1 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">S</div>
+            <div class="case-header-text">
+              <h3>Sarah, 34</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Manchester
+              </p>
+            </div>
+            <span class="case-tag case-tag--urgent">Urgent</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Breast cancer — Stage 2
+          </p>
+
+          <p class="case-story">
+            Sarah is a single mother of two young children, recently diagnosed with Stage 2
+            breast cancer. She needs to attend Christie Hospital for six weeks of daily
+            radiotherapy but has no reliable transport and no childcare for appointments.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Transport to and from daily radiotherapy</li>
+              <li>Childcare during treatment sessions</li>
+              <li>Meal support for her family</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:37%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£450</strong> raised</span>
+              <span>of <strong>£1,200</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support Sarah&rsquo;s case
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <!-- CASE 2 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">D</div>
+            <div class="case-header-text">
+              <h3>Daniel, 8</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Wythenshawe
+              </p>
+            </div>
+            <span class="case-tag">Child</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Acute lymphoblastic leukaemia
+          </p>
+
+          <p class="case-story">
+            Daniel is eight years old and is receiving treatment at Royal Manchester
+            Children&rsquo;s Hospital. His parents have both reduced their work hours to be at
+            his bedside, and the family is struggling to keep up with travel and household costs.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Travel costs to and from hospital</li>
+              <li>Meal and grocery support</li>
+              <li>Help with household bills</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:44%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£1,100</strong> raised</span>
+              <span>of <strong>£2,500</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support Daniel&rsquo;s case
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <!-- CASE 3 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">G</div>
+            <div class="case-header-text">
+              <h3>Grace, 52</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Salford
+              </p>
+            </div>
+            <span class="case-tag case-tag--recovery">Recovery</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Ovarian cancer — post-surgery
+          </p>
+
+          <p class="case-story">
+            Grace is recovering at home after major surgery. Her husband has reduced his work
+            hours to become her full-time caregiver, putting pressure on the household finances.
+            Grace is also struggling emotionally and would benefit from professional counselling.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Professional counselling sessions</li>
+              <li>Household cleaning and support</li>
+              <li>Place in a peer support group</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:75%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£600</strong> raised</span>
+              <span>of <strong>£800</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support Grace&rsquo;s case
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <!-- CASE 4 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">O</div>
+            <div class="case-header-text">
+              <h3>The Okafor Family</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Manchester
+              </p>
+            </div>
+            <span class="case-tag">Family</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Prostate cancer — father is patient
+          </p>
+
+          <p class="case-story">
+            The Okafor family has two young children. Their father was recently diagnosed with
+            prostate cancer and their mother has become his primary caregiver. The family is
+            facing lost income and needs practical, day-to-day help to keep things running.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Weekly care packages and meals</li>
+              <li>School run help for the children</li>
+              <li>Help with utility bills this winter</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:21%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£320</strong> raised</span>
+              <span>of <strong>£1,500</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support the Okafor family
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <!-- CASE 5 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">J</div>
+            <div class="case-header-text">
+              <h3>James, 27</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Stockport
+              </p>
+            </div>
+            <span class="case-tag case-tag--survivor">Survivor</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Hodgkin lymphoma — in remission
+          </p>
+
+          <p class="case-story">
+            James has finished treatment and is in remission — but returning to normal life has
+            been harder than expected. He needs counselling to process his experience, help
+            rebuilding his confidence at work, and guidance navigating benefits paperwork.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Rehabilitation and confidence coaching</li>
+              <li>Counselling sessions</li>
+              <li>Help with benefits and paperwork</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:68%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£410</strong> raised</span>
+              <span>of <strong>£600</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support James&rsquo;s case
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <!-- CASE 6 -->
+        <article class="case-card">
+          <div class="case-header">
+            <div class="case-avatar" aria-hidden="true">A</div>
+            <div class="case-header-text">
+              <h3>Amara, 45</h3>
+              <p class="case-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Manchester
+              </p>
+            </div>
+            <span class="case-tag">In treatment</span>
+          </div>
+
+          <p class="case-condition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.8 15.6 3.8 10.2A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 8.2 2.8c0 5.4-8.2 10.3-8.2 10.3Z"/></svg>
+            Cervical cancer — undergoing chemotherapy
+          </p>
+
+          <p class="case-story">
+            Amara is midway through chemotherapy. The treatment has caused significant hair loss
+            and appetite loss, and the cost of travelling to appointments and buying supplements
+            has become overwhelming. She is also struggling with household bills while unable to work.
+          </p>
+
+          <div class="case-needs">
+            <h4>What&rsquo;s needed</h4>
+            <ul>
+              <li>Wig and head-covering support</li>
+              <li>Nutrition supplements</li>
+              <li>Help with household expenses</li>
+            </ul>
+          </div>
+
+          <div class="case-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
+              <span style="width:28%"></span>
+            </div>
+            <div class="progress-text">
+              <span><strong>£250</strong> raised</span>
+              <span>of <strong>£900</strong></span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary case-btn" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">
+            Support Amara&rsquo;s case
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cases-cta">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h2>Can&rsquo;t choose just one?</h2>
+          <p>That&rsquo;s okay. A general donation lets us direct support to whichever case needs it most urgently this week.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">Donate to our general fund</a>
+          <a class="btn btn-light" href="index.html#involved">Other ways to help</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <a class="brand" href="index.html" aria-label="BeeOba Lifeline Initiatives — home">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 3.5 56.5 17.75v28.5L32 60.5 7.5 46.25v-28.5z" fill="#F2B705" opacity=".15"/>
+            <path d="M32 3.5 56.5 17.75v28.5L32 60.5 7.5 46.25v-28.5z" fill="none" stroke="#F2B705" stroke-width="3" stroke-linejoin="round"/>
+            <ellipse cx="30" cy="22.5" rx="9" ry="5.6" fill="#9BD9D6" opacity=".85" transform="rotate(-26 30 22.5)"/>
+            <ellipse cx="41" cy="21.5" rx="8" ry="5" fill="#C6EAE8" opacity=".85" transform="rotate(18 41 21.5)"/>
+            <ellipse cx="33" cy="36" rx="13.5" ry="10" fill="#F2B705"/>
+            <g stroke="#0B2E2B" stroke-width="3.6" stroke-linecap="round" transform="rotate(-8 33 36)">
+              <path d="M30.4 28.5v15"/>
+              <path d="M38 28.5v15"/>
+            </g>
+            <path d="M45.6 33.6 51 36l-5.4 2.4z" fill="#0B2E2B" opacity=".85"/>
+            <circle cx="20.5" cy="32" r="6.6" fill="#0B2E2B"/>
+            <circle cx="18.4" cy="30.4" r="1.5" fill="#FFFBF3"/>
+            <path d="M17 26.4c-1.8-4-3.6-6-6.2-7" fill="none" stroke="#0B2E2B" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="10.2" cy="19" r="1.7" fill="#F2B705"/>
+            <path d="M22.4 25.6c.5-4 1.9-6.4 4-8" fill="none" stroke="#0B2E2B" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="27" cy="16.8" r="1.7" fill="#F2B705"/>
+          </svg>
+          <span class="brand-text">
+            <strong>BeeOba</strong>
+            <small>Lifeline Initiatives</small>
+          </span>
+        </a>
+
+        <p class="footer-about">
+          A nonprofit organization supporting cancer patients, survivors and their families
+          &mdash; and individuals facing serious health challenges &mdash; with compassionate
+          support, awareness, advocacy and practical assistance.
+        </p>
+
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.17v2.26H7.5V13h2.7v8z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.3l-7.2 8.2L22 21h-6.6l-5.2-6.7L4.3 21H1l7.7-8.8L2 3h6.8l4.7 6.1zm-1.2 16h1.8L7.8 4.9H5.9z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M3 9.5h4V21H3zM10 9.5h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.3c0-1.27-.02-2.9-1.9-2.9-1.9 0-2.2 1.4-2.2 2.8V21h-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="index.html#programs">Our programs</a></li>
+          <li><a href="index.html#journey">How we help</a></li>
+          <li><a href="cases.html">Cases we support</a></li>
+          <li><a href="index.html#involved">Get involved</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="index.html#contact">Request support</a></li>
+          <li><a href="index.html#contact">Volunteer</a></li>
+          <li><a href="https://donate.stripe.com/5kQ5kD5Sy4sBcJR44pfIs01" target="_blank" rel="noopener">Donate</a></li>
+          <li><a href="index.html#contact">Partner with us</a></li>
+          <li><a href="mailto:beeobalifelineinitiatives@gmail.com">beeobalifelineinitiatives@gmail.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 BeeOba Lifeline Initiatives. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Safeguarding</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
